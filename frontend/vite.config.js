@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
 
     server: {
       host: '0.0.0.0',
-      port: 5173,
+      port: env.FRONTEND_URL,
       allowedHosts: true,
 
       proxy: {
