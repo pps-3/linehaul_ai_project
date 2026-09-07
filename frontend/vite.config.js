@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
 
       proxy: {
         '/api': {
-          target: env.BACKEND_URL || 'http://localhost:8080',
+          target: env.VITE_BACKEND_URL || 'http://localhost:8080',
           changeOrigin: true,
         },
       },
