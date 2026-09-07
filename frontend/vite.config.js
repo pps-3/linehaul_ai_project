@@ -9,12 +9,11 @@ export default defineConfig(({ mode }) => {
 
     server: {
       host: '0.0.0.0',
-      port: env.FRONTEND_URL,
-      allowedHosts: true,
+      port: 5173,
 
       proxy: {
         '/api': {
-          target: env.BACKEND_URL,
+          target: env.BACKEND_URL || 'http://localhost:8080',
           changeOrigin: true,
         },
       },
